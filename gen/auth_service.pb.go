@@ -4,7 +4,7 @@
 // 	protoc        v7.34.1
 // source: auth_service.proto
 
-package authpb
+package auth_pb
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ const file_auth_service_proto_rawDesc = "" +
 	"\bValidate\x12\x16.google.protobuf.Empty\x1a\x11.ValidateResponse\x128\n" +
 	"\fRefreshToken\x12\x16.google.protobuf.Empty\x1a\x10.RefreshResponse\x12%\n" +
 	"\x05Login\x12\f.AuthRequest\x1a\x0e.LoginResponse\x120\n" +
-	"\x06Delete\x12\x0e.DeleteRequest\x1a\x16.google.protobuf.EmptyB\x0eZ\f./gen;authpbb\x06proto3"
+	"\x06Delete\x12\x0e.DeleteRequest\x1a\x16.google.protobuf.EmptyB\x0fZ\r./gen;auth_pbb\x06proto3"
 
 var file_auth_service_proto_goTypes = []any{
 	(*AuthRequest)(nil),      // 0: AuthRequest

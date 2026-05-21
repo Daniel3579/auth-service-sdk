@@ -4,7 +4,7 @@
 // 	protoc        v7.34.1
 // source: auth_requests.proto
 
-package authpb
+package auth_pb
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -23,7 +23,7 @@ const (
 
 type AuthRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	Email         string                 `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	Password      string                 `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -59,9 +59,9 @@ func (*AuthRequest) Descriptor() ([]byte, []int) {
 	return file_auth_requests_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *AuthRequest) GetUsername() string {
+func (x *AuthRequest) GetEmail() string {
 	if x != nil {
-		return x.Username
+		return x.Email
 	}
 	return ""
 }
@@ -75,7 +75,7 @@ func (x *AuthRequest) GetPassword() string {
 
 type DeleteRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Username      string                 `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	Id            int32                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -110,23 +110,23 @@ func (*DeleteRequest) Descriptor() ([]byte, []int) {
 	return file_auth_requests_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *DeleteRequest) GetUsername() string {
+func (x *DeleteRequest) GetId() int32 {
 	if x != nil {
-		return x.Username
+		return x.Id
 	}
-	return ""
+	return 0
 }
 
 var File_auth_requests_proto protoreflect.FileDescriptor
 
 const file_auth_requests_proto_rawDesc = "" +
 	"\n" +
-	"\x13auth_requests.proto\"E\n" +
-	"\vAuthRequest\x12\x1a\n" +
-	"\busername\x18\x01 \x01(\tR\busername\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\"+\n" +
-	"\rDeleteRequest\x12\x1a\n" +
-	"\busername\x18\x01 \x01(\tR\busernameB\x0eZ\f./gen;authpbb\x06proto3"
+	"\x13auth_requests.proto\"?\n" +
+	"\vAuthRequest\x12\x14\n" +
+	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
+	"\bpassword\x18\x02 \x01(\tR\bpassword\"\x1f\n" +
+	"\rDeleteRequest\x12\x0e\n" +
+	"\x02id\x18\x01 \x01(\x05R\x02idB\x0fZ\r./gen;auth_pbb\x06proto3"
 
 var (
 	file_auth_requests_proto_rawDescOnce sync.Once

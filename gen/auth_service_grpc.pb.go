@@ -4,7 +4,7 @@
 // - protoc             v7.34.1
 // source: auth_service.proto
 
-package authpb
+package auth_pb
 
 import (
 	context "context"

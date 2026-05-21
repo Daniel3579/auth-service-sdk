@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-option go_package = "./gen;authpb";
+option go_package = "./gen;auth_pb";
 
 message AuthRequest {
-    string username = 1;
+    string email = 1;
     string password = 2;
 }
 
 message DeleteRequest {
-    string username = 1;
+    int32 id = 1;
 }
